@@ -18,40 +18,40 @@ The connector brings the following service templates (sorted by the host templat
 <Tabs groupId="sync">
 <TabItem value="OS-Linux-NRPE4-custom" label="OS-Linux-NRPE4-custom">
 
-| Service Alias | Service Template             | Service Description                                                                                                                                |
-|:--------------|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cpu           | OS-Linux-Cpu-NRPE4-custom    | Check the rate of utilization of CPUs for the machine. This check can give the average CPU utilization rate and the rate per CPU for multi-core CPUs |
-| Load          | OS-Linux-Load-NRPE4-custom   | Check the server load average                                                                                                                      |
-| Memory        | OS-Linux-Memory-NRPE4-custom | Check the rate of the utilization of memory                                                                                                        |
-| Ntp           | OS-Linux-Ntp-NRPE4-custom    | Check system time synchronization with NTP server                                                                                                  |
-| Protocol-NRPE4 | OS-Linux-Protocol-NRPE4-custom | Control test to make sure the NRPE v4 protocol is configured correctly.    |
-| Swap          | OS-Linux-Swap-NRPE4-custom   | Check virtual memory usage                                                                                                                         |
-| Uptime        | OS-Linux-Uptime-NRPE4-custom | Time since the server has been working and available                                                                                               |
+| Service Alias  | Service Template               | Service Description                                                                                                                                  |
+|:---------------|:-------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cpu            | OS-Linux-Cpu-NRPE4-custom      | Check the rate of utilization of CPUs for the machine. This check can give the average CPU utilization rate and the rate per CPU for multi-core CPUs |
+| Load           | OS-Linux-Load-NRPE4-custom     | Check the server load average                                                                                                                        |
+| Memory         | OS-Linux-Memory-NRPE4-custom   | Check the rate of the utilization of memory                                                                                                          |
+| Ntp            | OS-Linux-Ntp-NRPE4-custom      | Check system time synchronization with NTP server                                                                                                    |
+| Protocol-NRPE4 | OS-Linux-Protocol-NRPE4-custom | Control test to make sure the NRPE v4 protocol is configured correctly.                                                                              |
+| Swap           | OS-Linux-Swap-NRPE4-custom     | Check virtual memory usage                                                                                                                           |
+| Uptime         | OS-Linux-Uptime-NRPE4-custom   | Time since the server has been working and available                                                                                                 |
 
 > The services listed above are created automatically when the **OS-Linux-NRPE4-custom** host template is used.
 
 </TabItem>
 <TabItem value="Not attached to a host template" label="Not attached to a host template">
 
-| Service Alias       | Service Template                          | Service Description                                                                                                                                         | Discovery  |
-|:--------------------|:------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------:|
-| Cmd-Generic         | OS-Linux-Cmd-Generic-NRPE4-custom         | Check exit code for Linux commands                                                                                                                           |            |
-| Connections-Generic | OS-Linux-Connections-Generic-NRPE4-custom | Check TCP/UDP connections                                                                                                                                   |            |
+| Service Alias       | Service Template                          | Service Description                                                                                                                                           | Discovery  |
+|:--------------------|:------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------:|
+| Cmd-Generic         | OS-Linux-Cmd-Generic-NRPE4-custom         | Check exit code for Linux commands                                                                                                                            |            |
+| Connections-Generic | OS-Linux-Connections-Generic-NRPE4-custom | Check TCP/UDP connections                                                                                                                                     |            |
 | Cpu-Detailed        | OS-Linux-Cpu-Detailed-NRPE4-custom        | Check the detailed rate of utilization of CPUs for the machine. This check can give the average CPU utilization rate and the rate per CPU for multi-core CPUs |            |
-| Disk-IO             | OS-Linux-Disk-IO-NRPE4-custom             | Check I/O counters of disks                                                                                                                                 |            |
-| Disks               | OS-Linux-Disks-NRPE4-custom               | Check the rate of free space on disks. For each check the mount point of disks will appear                                                                 | X          |
-| File-Date-Generic   | OS-Linux-File-Date-Generic-NRPE4-custom   | Check file or/and directory modification/creation/access times                                                                                              |            |
-| File-Size-Generic   | OS-Linux-File-Size-Generic-NRPE4-custom   | Check file or/and directory sizes                                                                                                                           |            |
-| Inodes              | OS-Linux-Inodes-NRPE4-custom              | Check the rate of free inodes on disks                                                                                                                      |            |
-| Is-File-Generic     | OS-Linux-Is-File-Generic-NRPE4-custom     | Check if file 'xxx' is present                                                                                                                              |            |
-| Is-Not-File-Generic | OS-Linux-Is-Not-File-Generic-NRPE4-custom | Check if file 'xxx' is not present                                                                                                                          |            |
-| Open-Files          | OS-Linux-Open-Files-NRPE4-custom          | Check file or/and directory modification/creation/access times                                                                                              |            |
+| Disk-IO             | OS-Linux-Disk-IO-NRPE4-custom             | Check I/O counters of disks                                                                                                                                   |            |
+| Disks               | OS-Linux-Disks-NRPE4-custom               | Check the rate of free space on disks. For each check the mount point of disks will appear                                                                    | X          |
+| File-Date-Generic   | OS-Linux-File-Date-Generic-NRPE4-custom   | Check file or/and directory modification/creation/access times                                                                                                |            |
+| File-Size-Generic   | OS-Linux-File-Size-Generic-NRPE4-custom   | Check file or/and directory sizes                                                                                                                             |            |
+| Inodes              | OS-Linux-Inodes-NRPE4-custom              | Check the rate of free inodes on disks                                                                                                                        |            |
+| Is-File-Generic     | OS-Linux-Is-File-Generic-NRPE4-custom     | Check if file 'xxx' is present                                                                                                                                |            |
+| Is-Not-File-Generic | OS-Linux-Is-Not-File-Generic-NRPE4-custom | Check if file 'xxx' is not present                                                                                                                            |            |
+| Open-Files          | OS-Linux-Open-Files-NRPE4-custom          | Check file or/and directory modification/creation/access times                                                                                                |            |
 | Packet-Errors       | OS-Linux-Packet-Errors-NRPE4-custom       | Check packets in error/discarded from multiple network interfaces                                                                                             |            |
-| Pending-Updates     | OS-Linux-Pending-Updates-NRPE4-custom     | Check systemd services status                                                                                                                               |            |
-| Process-Generic     | OS-Linux-Process-Generic-NRPE4-custom     | Check Linux processes                                                                                                                                       |            |
-| Systemd-Journal     | OS-Linux-Systemd-Journal-NRPE4-custom     | Count journal entries using the `journalctl` command.          |            |
-| Systemd-Sc-Status   | OS-Linux-Systemd-Sc-Status-NRPE4-custom   | Check systemd services status                                                                                                                               |            |
-| Traffic             | OS-Linux-Traffic-NRPE4-custom             | Check the bandwidth of interfaces.                                                                   | X          |
+| Pending-Updates     | OS-Linux-Pending-Updates-NRPE4-custom     | Check systemd services status                                                                                                                                 |            |
+| Process-Generic     | OS-Linux-Process-Generic-NRPE4-custom     | Check Linux processes                                                                                                                                         |            |
+| Systemd-Journal     | OS-Linux-Systemd-Journal-NRPE4-custom     | Count journal entries using the `journalctl` command.                                                                                                         |            |
+| Systemd-Sc-Status   | OS-Linux-Systemd-Sc-Status-NRPE4-custom   | Check systemd services status                                                                                                                                 |            |
+| Traffic             | OS-Linux-Traffic-NRPE4-custom             | Check the bandwidth of interfaces.                                                                                                                            | X          |
 
 > The services listed above are not created automatically when a host template is applied. To use them, [create a service manually](/docs/monitoring/basic-objects/services), then apply the service template you want.
 
@@ -681,13 +681,13 @@ yum install nagios-plugins-nrpe
 3. Apply the **OS-Linux-NRPE4-custom** template to the host. A list of macros appears. Macros allow you to define how the connector will connect to the resource, and to customize the connector's behavior.
 4. Fill in the macros you want. Some macros are mandatory.
 
-| Macro            | Description                                                                                          | Default value                  | Mandatory   |
-|:-----------------|:-----------------------------------------------------------------------------------------------------|:-------------------------------|:-----------:|
-| NRPEPORT         |                                                                                                      | 5666                           |             |
-| NRPECLIENT       |                                                                                                      | check\_nrpe                    |             |
-| NRPESTATEFILEDIR | Define the cache directory (default: '/var/lib/centreon/centplugins')                                | /var/lib/centreon/centplugins/ |             |
-| NRPETIMEOUT      |                                                                                                      | 5                              |             |
-| NRPEEXTRAOPTIONS | Any extra option you may want to add to every command (a --verbose flag for example). All options are listed [here](#available-options). |                                |             |
+| Macro            | Description                                                                                                                              | Default value                  | Mandatory |
+|:-----------------|:-----------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|:---------:|
+| NRPEPORT         | TCP port the NRPE daemon is listening to                                                                                                 | 5666                           |           |
+| NRPECLIENT       | Name of the plugin to use to dialog with the NRPE daemon                                                                                 | check\_nrpe                    |           |
+| NRPESTATEFILEDIR | Define the cache directory (default: '/var/lib/centreon/centplugins')                                                                    | /var/lib/centreon/centplugins/ |           |
+| NRPETIMEOUT      | Command timeout                                                                                                                          | 5                              |           |
+| NRPEEXTRAOPTIONS | Any extra option you may want to add to every command (a --verbose flag for example). All options are listed [here](#available-options). |                                |           |
 
 5. [Deploy the configuration](/docs/monitoring/monitoring-servers/deploying-a-configuration). The host appears in the list of hosts, and on the **Resources Status** page. The command that is sent by the connector is displayed in the details panel of the host: it shows the values of the macros.
 

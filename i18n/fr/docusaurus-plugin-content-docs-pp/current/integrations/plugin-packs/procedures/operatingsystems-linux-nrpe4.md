@@ -26,8 +26,8 @@ Le connecteur apporte les modèles de service suivants
 | Cpu    | OS-Linux-Cpu-NRPE4-custom    | Contrôle du taux d'utilisation CPU de la machine. Ce contrôle pourra remonter la moyenne du taux d'utilisation des CPU ainsi que le taux par CPU pour les CPU multi-coeur |
 | Load   | OS-Linux-Load-NRPE4-custom   | Contrôle de la charge serveur                                                                                                                                             |
 | Memory | OS-Linux-Memory-NRPE4-custom | Contrôle du taux d'utilisation de la mémoire vive                                                                                                                         |
-| Ntp    | OS-Linux-Ntp-NRPE4-custom    | Contrôle la synchronisation du système avec un serveur NTP                                                                                                           |
-| Protocol-NRPE4 | OS-Linux-Protocol-NRPE4-custom | Contrôle de la bonne configuration du protocole NRPE v4.    |
+| Ntp    | OS-Linux-Ntp-NRPE4-custom    | Contrôle la synchronisation du système avec un serveur NTP                                                                                                                |
+| Protocol-NRPE4 | OS-Linux-Protocol-NRPE4-custom | Contrôle de la bonne configuration du protocole NRPE v4.                                                                                                                  |
 | Swap   | OS-Linux-Swap-NRPE4-custom   | Contrôle du taux d'utilisation de la mémoire virtuelle                                                                                                                    |
 | Uptime | OS-Linux-Uptime-NRPE4-custom | Durée depuis laquelle le serveur tourne sans interruption                                                                                                                 |
 
@@ -43,16 +43,16 @@ Le connecteur apporte les modèles de service suivants
 | Cpu-Detailed        | OS-Linux-Cpu-Detailed-NRPE4-custom        | Contrôle du taux d'utilisation détaillé du CPU de la machine. Ce contrôle pourra remonter la moyenne du taux d'utilisation des CPU ainsi que le taux par CPU pour les CPU multi-coeur |            |
 | Disk-IO             | OS-Linux-Disk-IO-NRPE4-custom             | Contrôle les compteurs I/O des disques                                                                                                                                                |            |
 | Disks               | OS-Linux-Disks-NRPE4-custom               | Contrôle du taux d'espace libre disponible des disques. Pour chaque contrôle apparaîtra le point de montage des disques                                                               | X          |
-| File-Date-Generic   | OS-Linux-File-Date-Generic-NRPE4-custom   | Permet de vérifier la date de modification/création/accès/... de fichiers et/ou répertoires                                                                                          |            |
+| File-Date-Generic   | OS-Linux-File-Date-Generic-NRPE4-custom   | Permet de vérifier la date de modification/création/accès/... de fichiers et/ou répertoires                                                                                           |            |
 | File-Size-Generic   | OS-Linux-File-Size-Generic-NRPE4-custom   | Permet de vérifier la taille de fichiers et/ou répertoires                                                                                                                            |            |
 | Inodes              | OS-Linux-Inodes-NRPE4-custom              | Contrôle du taux d'inodes disponible des disques                                                                                                                                      |            |
 | Is-File-Generic     | OS-Linux-Is-File-Generic-NRPE4-custom     | Permet de vérifier si le fichier 'xxx' est présent                                                                                                                                    |            |
 | Is-Not-File-Generic | OS-Linux-Is-Not-File-Generic-NRPE4-custom | Permet de vérifier si le fichier 'xxx' n'est pas présent                                                                                                                              |            |
-| Open-Files          | OS-Linux-Open-Files-NRPE4-custom          | Permet de vérifier le nombre de modification/création/accès/... de fichiers et/ou répertoires                                                                                          |            |
-| Packet-Errors       | OS-Linux-Packet-Errors-NRPE4-custom       | Contrôle le pourcentage de paquets en erreur/écartés de plusieurs interfaces réseau                                                                                                    |            |
+| Open-Files          | OS-Linux-Open-Files-NRPE4-custom          | Permet de vérifier le nombre de modification/création/accès/... de fichiers et/ou répertoires                                                                                         |            |
+| Packet-Errors       | OS-Linux-Packet-Errors-NRPE4-custom       | Contrôle le pourcentage de paquets en erreur/écartés de plusieurs interfaces réseau                                                                                                   |            |
 | Pending-Updates     | OS-Linux-Pending-Updates-NRPE4-custom     | Contrôle le statut des services systemd                                                                                                                                               |            |
 | Process-Generic     | OS-Linux-Process-Generic-NRPE4-custom     | Contrôle permettant de vérifier des processus Linux                                                                                                                                   |            |
-| Systemd-Journal     | OS-Linux-Systemd-Journal-NRPE4-custom     | Compte les entrées de journal grâce à la commande `journalctl`             |            |
+| Systemd-Journal     | OS-Linux-Systemd-Journal-NRPE4-custom     | Compte les entrées de journal grâce à la commande `journalctl`                                                                                                                        |            |
 | Systemd-Sc-Status   | OS-Linux-Systemd-Sc-Status-NRPE4-custom   | Contrôle le statut des services systemd                                                                                                                                               |            |
 | Traffic             | OS-Linux-Traffic-NRPE4-custom             | Contrôle de la bande passante des interfaces. Pour chaque contrôle apparaîtra le nom de l'interface                                                                                   | X          |
 
@@ -685,12 +685,12 @@ yum install nagios-plugins-nrpe
 3. Appliquez le modèle d'hôte **OS-Linux-NRPE4-custom**. Une liste de macros apparaît. Les macros vous permettent de définir comment le connecteur se connectera à la ressource, ainsi que de personnaliser le comportement du connecteur.
 4. Renseignez les macros désirées. Attention, certaines macros sont obligatoires.
 
-| Macro            | Description                                                                                          | Valeur par défaut              | Obligatoire |
-|:-----------------|:-----------------------------------------------------------------------------------------------------|:-------------------------------|:-----------:|
-| NRPEPORT         |                                                                                                      | 5666                           |             |
-| NRPECLIENT       |                                                                                                      | check\_nrpe                    |             |
-| NRPESTATEFILEDIR | Define the cache directory (default: '/var/lib/centreon/centplugins')                                | /var/lib/centreon/centplugins/ |             |
-| NRPETIMEOUT      |                                                                                                      | 5                              |             |
+| Macro            | Description                                                                                                                                        | Valeur par défaut              | Obligatoire |
+|:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|:-----------:|
+| NRPEPORT         | TCP port the NRPE daemon is listening to                                                                                                           | 5666                           |             |
+| NRPECLIENT       | Name of the plugin to use to dialog with the NRPE daemon                                                                                           | check\_nrpe                    |             |
+| NRPESTATEFILEDIR | Define the cache directory (default: '/var/lib/centreon/centplugins')                                                                              | /var/lib/centreon/centplugins/ |             |
+| NRPETIMEOUT      | Command timeout                                                                                                                                    | 5                              |             |
 | NRPEEXTRAOPTIONS | Any extra option you may want to add to every command (a --verbose flag for example). Toutes les options sont listées [ici](#options-disponibles). |                                |             |
 
 5. [Déployez la configuration](/docs/monitoring/monitoring-servers/deploying-a-configuration). L'hôte apparaît dans la liste des hôtes supervisés, et dans la page **Statut des ressources**. La commande envoyée par le connecteur est indiquée dans le panneau de détails de l'hôte : celle-ci montre les valeurs des macros.
