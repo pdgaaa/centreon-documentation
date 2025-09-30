@@ -683,8 +683,8 @@ yum install nagios-plugins-nrpe
 
 | Macro            | Description                                                                                                                              | Default value                  | Mandatory |
 |:-----------------|:-----------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|:---------:|
-| NRPEPORT         | TCP port the NRPE daemon is listening to                                                                                                 | 5666                           |           |
-| NRPECLIENT       | Name of the plugin to use to dialog with the NRPE daemon                                                                                 | check\_nrpe                    |           |
+| NRPEPORT         | TCP port the NRPE daemon is listening on                                                                                                 | 5666                           |           |
+| NRPECLIENT       | Name of the plugin to use to talk with the NRPE daemon                                                                                 | check\_nrpe                    |           |
 | NRPESTATEFILEDIR | Define the cache directory (default: '/var/lib/centreon/centplugins')                                                                    | /var/lib/centreon/centplugins/ |           |
 | NRPETIMEOUT      | Command timeout                                                                                                                          | 5                              |           |
 | NRPEEXTRAOPTIONS | Any extra option you may want to add to every command (a --verbose flag for example). All options are listed [here](#available-options). |                                |           |
