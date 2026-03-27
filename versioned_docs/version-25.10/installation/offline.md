@@ -61,8 +61,10 @@ rpm --import https://yum-gpg.centreon.com/RPM-GPG-KEY-CES
 4. Synchronize the repositories:
 
    ```shell
-   reposync -p /var/www/html/repos/centreon/ -r centreon-stable-noarch
-   reposync -p /var/www/html/repos/centreon/ -r centreon-stable
+   reposync -n -p /var/www/html/repos/centreon/ --repo centreon-25.10-stable-noarch
+   reposync -n -p /var/www/html/repos/centreon/ --repo centreon-25.10-stable
+   reposync -n -p /var/www/html/repos/centreon/ --repo centreon-plugins-25.10-stable-noarch
+   reposync -n -p /var/www/html/repos/centreon/ --repo centreon-plugins-25.10-stable
    ```
 
 5. Create the repository:
